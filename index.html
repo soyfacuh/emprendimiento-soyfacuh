@@ -392,6 +392,7 @@
   .work-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; color: var(--accent); font-size: 0.9rem; font-weight: 500; }
   @media (max-width: 820px) {
     .work-grid, .work-card.featured { grid-template-columns: 1fr; }
+    .work-card.featured { grid-column: auto; }
     .work-card.featured .work-img-wrap { aspect-ratio: 16/10; border-right: none; border-bottom: 1px solid var(--line); }
   }
 
@@ -589,7 +590,10 @@
     transition: all .2s; font-size: 1.1rem; flex-shrink: 0;
   }
   .carousel-btn:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); transform: translateY(-1px); }
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
+    .testi { flex: 0 0 calc((100% - 20px) / 2); }
+  }
+  @media (max-width: 700px) {
     .testi { flex: 0 0 100%; min-height: 240px; }
     .testi-track { gap: 16px; }
   }
