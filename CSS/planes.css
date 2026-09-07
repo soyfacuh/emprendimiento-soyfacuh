@@ -188,3 +188,68 @@
   @keyframes waPulse{0%{transform:scale(1);opacity:.55}70%{transform:scale(1.7);opacity:0}100%{transform:scale(1.7);opacity:0}}
   @media (prefers-reduced-motion: reduce){.wa-float,.wa-float__pulse{animation:none;transition:none}}
   @media (max-width:480px){.wa-float{width:54px;height:54px}.wa-float__icon{width:26px;height:26px}}
+
+  /* ===== Planes sin precios: jerarquía visual ===== */
+  .plan-from {
+    display: inline-block;
+    align-self: flex-start;
+    width: auto;
+    background: var(--accent-soft);
+    color: #a4551f;
+    border: 1px solid rgba(232,123,58,0.28);
+    border-radius: 999px;
+    padding: 5px 12px;
+    margin-bottom: 14px;
+    font-size: 0.65rem;
+  }
+  .plan.featured .plan-from {
+    background: rgba(245,163,107,0.14);
+    border-color: rgba(245,163,107,0.34);
+    color: var(--accent-2);
+  }
+  .plan-hook {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1.28rem;
+    line-height: 1.22;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin: 2px 0 14px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
+  .plan-hook::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -1px;
+    width: 56px; height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+  .plan.featured .plan-hook { color: #fff; border-bottom-color: rgba(255,255,255,0.14); }
+  .plan.featured .plan-hook::after { background: var(--accent-2); }
+  .plan .plan-desc { margin-bottom: 20px; }
+  .plan ul { padding-top: 4px; }
+  .plan ul li::before {
+    content: "✓";
+    font-size: 0.72rem;
+    width: 18px; height: 18px;
+    margin-top: 2px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .plan.featured ul li::before { background: rgba(245,163,107,0.16); color: var(--accent-2); }
+  .plan { padding: 34px 30px 32px; }
+  .plan.featured { transform: translateY(-6px); }
+  .plan.featured:hover { transform: translateY(-10px); }
+  @media (max-width: 980px) {
+    .plan.featured, .plan.featured:hover { transform: none; }
+  }
+  .sub-plan { transition: border-color .25s, transform .25s; }
+  .sub-plan:hover { border-color: var(--accent); transform: translateY(-3px); }
+  @media (max-width: 600px) { .plan-hook { font-size: 1.15rem; } }
