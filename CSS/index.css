@@ -57,7 +57,7 @@
   }
   .nav-links { display: flex; gap: 32px; font-size: 0.9rem; }
   .nav-links a { color: var(--ink-2); transition: color .2s; font-weight: 500; }
-  .nav-links a:hover { color: var(--accent); }
+  .nav-links a:hover, .nav-links a.active { color: var(--accent); }
   .nav-cta {
     padding: 10px 18px;
     background: var(--ink); color: var(--bg);

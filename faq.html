@@ -407,8 +407,24 @@
 </a>
 
 <script>
-/* Scroll suave para los anchors internos de esta página (índice de categorías y CTA). */
+/* Nav: resalta "FAQ" como página activa y adapta los links de sección hacia index.html
+   (faq.html no tiene esas secciones propias, así que acá no hay scroll-spy). */
 (function () {
+  var navLinks = document.querySelectorAll('.nav-links a, .nav-cta');
+
+  navLinks.forEach(function (a) {
+    var page = a.getAttribute('data-nav-page');
+    if (page) a.classList.toggle('active', page === 'faq');
+  });
+
+  navLinks.forEach(function (a) {
+    var sec = a.getAttribute('data-nav');
+    if (!sec) return;
+    var el = document.getElementById(sec);
+    a.setAttribute('href', el ? '#' + sec : 'index.html#' + sec);
+  });
+
+  /* Scroll suave para los anchors internos de esta página (índice de categorías y CTA). */
   document.addEventListener('click', function (e) {
     var a = e.target.closest('a[href^="#"]');
     if (!a) return;

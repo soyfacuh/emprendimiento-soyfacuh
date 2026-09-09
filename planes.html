@@ -484,25 +484,44 @@
 </a>
 
 <script>
-/* Nav adaptable: si la sección existe en la página actual, scroll suave;
-   si no, navega a index.html#seccion. Marca activo según la ruta. */
+/* Nav: resalta el link activo (página + sección visible al scrollear) y adapta
+   los links de sección si no existen en la página actual. */
 (function () {
   var path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  var isPlanes = path === 'planes.html';
-  document.querySelectorAll('.nav-links a, .nav-cta').forEach(function (a) {
+  var currentPage = path === 'planes.html' ? 'planes' : path === 'faq.html' ? 'faq' : 'index';
+  var navLinks = document.querySelectorAll('.nav-links a, .nav-cta');
+
+  navLinks.forEach(function (a) {
     var page = a.getAttribute('data-nav-page');
+    if (page) a.classList.toggle('active', page === currentPage);
+  });
+
+  var sectionLinks = [];
+  navLinks.forEach(function (a) {
     var sec = a.getAttribute('data-nav');
-    if (page === 'planes' && isPlanes) a.classList.add('active');
-    if (sec && !isPlanes) {
-      // estamos en index: dejar el href como #seccion
+    if (!sec) return;
+    var el = document.getElementById(sec);
+    if (el) {
       a.setAttribute('href', '#' + sec);
-    } else if (sec && isPlanes) {
-      // estamos en planes: si la sección existe acá, dejar #; si no, ir a index.html#
-      a.setAttribute('href', document.getElementById(sec) ? '#' + sec : 'index.html#' + sec);
+      sectionLinks.push({ link: a, section: el });
+    } else if (currentPage !== 'index') {
+      a.setAttribute('href', 'index.html#' + sec);
     }
   });
 
-  // Scroll suave para anchors locales
+  if (sectionLinks.length && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        sectionLinks.forEach(function (s) { s.link.classList.remove('active'); });
+        var match = sectionLinks.find(function (s) { return s.section === entry.target; });
+        if (match) match.link.classList.add('active');
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+    sectionLinks.forEach(function (s) { observer.observe(s.section); });
+  }
+
   document.addEventListener('click', function (e) {
     var a = e.target.closest('a[href^="#"]');
     if (!a) return;
