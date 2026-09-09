@@ -1,0 +1,182 @@
+/* ============================================================
+   faq.css — estilos propios de la página de Preguntas Frecuentes
+   Depende de CSS/index.css (variables, nav, botones, footer).
+   Mobile-first friendly: mismos breakpoints que el index.
+   ============================================================ */
+
+/* HERO DE LA PÁGINA */
+.faq-hero {
+  padding: 140px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+.faq-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 8% 10%, rgba(232, 123, 58, 0.10), transparent 42%),
+    radial-gradient(circle at 92% 0%, rgba(192, 138, 74, 0.10), transparent 40%);
+  pointer-events: none;
+}
+.faq-hero .wrap { position: relative; }
+.faq-hero h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  margin: 22px 0 20px;
+}
+.faq-hero h1 em { color: var(--accent); font-style: italic; font-weight: 500; }
+.faq-hero p.faq-lead {
+  color: var(--ink-2);
+  font-size: 1.1rem;
+  max-width: 620px;
+  margin-bottom: 34px;
+}
+
+/* MIGA DE PAN */
+/* Por si la miga quedó como <nav class="breadcrumb"> en tu faq.html:
+   le sacamos a la fuerza los estilos de barra fija que hereda de index.css */
+nav.breadcrumb,
+.faq-hero nav.breadcrumb {
+  position: static;
+  top: auto; left: auto; right: auto;
+  z-index: auto;
+  background: none;
+  border: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  padding: 0;
+}
+nav.breadcrumb .wrap,
+.faq-hero nav.breadcrumb .wrap {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  gap: 8px;
+}
+
+.breadcrumb {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.breadcrumb a { color: var(--ink-2); }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb span[aria-current] { color: var(--accent); }
+
+/* ÍNDICE DE CATEGORÍAS */
+.faq-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+.faq-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: var(--bg-2);
+  color: var(--ink-2);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: background .2s, color .2s, border-color .2s, transform .2s;
+}
+.faq-chip:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+.faq-chip .faq-chip-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--accent);
+}
+
+/* BLOQUES POR CATEGORÍA */
+.faq-section { padding: 70px 0; border-top: 1px solid var(--line); }
+.faq-section:first-of-type { border-top: none; }
+.faq-section > .wrap > .faq-grid { align-items: start; }
+.faq-section h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(1.8rem, 3.6vw, 2.7rem);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.faq-section h2 em { color: var(--accent); font-style: italic; }
+.faq-section .faq-cat-note {
+  color: var(--ink-2);
+  margin-top: 16px;
+  max-width: 340px;
+  font-size: 0.98rem;
+}
+.faq-section .faq-cat-sticky { position: sticky; top: 110px; }
+@media (max-width: 820px) {
+  .faq-section { padding: 48px 0; }
+  .faq-section .faq-cat-sticky { position: static; }
+  .faq-section .faq-cat-note { max-width: none; }
+}
+
+/* PREGUNTAS (hereda .faq-item de index.css, refinado acá) */
+.faq-list .faq-item summary { gap: 18px; }
+.faq-list .faq-item summary:hover { color: var(--accent); }
+.faq-list .faq-item summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+.faq-list .faq-item p + p { margin-top: 10px; }
+.faq-list .faq-item p strong { color: var(--ink); }
+.faq-list .faq-item ul {
+  margin: 12px 0 0 18px;
+  color: var(--ink-2);
+  font-size: 0.96rem;
+}
+.faq-list .faq-item ul li { padding: 3px 0; }
+.faq-list .faq-item ul li::marker { color: var(--accent); }
+.faq-item .faq-tag {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  border: 1px solid var(--line-strong);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.faq-item .faq-inline-link {
+  color: var(--accent);
+  font-weight: 500;
+  border-bottom: 1px solid var(--line-strong);
+}
+.faq-item .faq-inline-link:hover { border-color: var(--accent); }
+
+/* MOBILE FINO */
+@media (max-width: 600px) {
+  .faq-hero { padding: 118px 0 40px; }
+  .faq-hero p.faq-lead { font-size: 1rem; }
+  .faq-list .faq-item summary { font-size: 1rem; }
+  .faq-chip { padding: 9px 13px; font-size: 0.82rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-chip, .faq-item summary::after { transition: none; }
+}
