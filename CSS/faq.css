@@ -29,7 +29,7 @@
   color: var(--ink);
   margin: 22px 0 20px;
 }
-.faq-hero h1 em { color: var(--accent); font-style: italic; font-weight: 500; }
+.faq-hero h1 em { color: var(--accent-ink); font-style: italic; font-weight: 500; }
 .faq-hero p.faq-lead {
   color: var(--ink-2);
   font-size: 1.1rem;
@@ -71,8 +71,8 @@ nav.breadcrumb .wrap,
   flex-wrap: wrap;
 }
 .breadcrumb a { color: var(--ink-2); }
-.breadcrumb a:hover { color: var(--accent); }
-.breadcrumb span[aria-current] { color: var(--accent); }
+.breadcrumb a:hover { color: var(--accent-ink); }
+.breadcrumb span[aria-current] { color: var(--accent-ink); }
 
 /* ÍNDICE DE CATEGORÍAS */
 .faq-index {
@@ -103,7 +103,7 @@ nav.breadcrumb .wrap,
 .faq-chip .faq-chip-num {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.68rem;
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 /* BLOQUES POR CATEGORÍA */
@@ -118,7 +118,7 @@ nav.breadcrumb .wrap,
   letter-spacing: -0.02em;
   color: var(--ink);
 }
-.faq-section h2 em { color: var(--accent); font-style: italic; }
+.faq-section h2 em { color: var(--accent-ink); font-style: italic; }
 .faq-section .faq-cat-note {
   color: var(--ink-2);
   margin-top: 16px;
@@ -134,7 +134,7 @@ nav.breadcrumb .wrap,
 
 /* PREGUNTAS (hereda .faq-item de index.css, refinado acá) */
 .faq-list .faq-item summary { gap: 18px; }
-.faq-list .faq-item summary:hover { color: var(--accent); }
+.faq-list .faq-item summary:hover { color: var(--accent-ink); }
 .faq-list .faq-item summary:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
@@ -148,7 +148,7 @@ nav.breadcrumb .wrap,
   font-size: 0.96rem;
 }
 .faq-list .faq-item ul li { padding: 3px 0; }
-.faq-list .faq-item ul li::marker { color: var(--accent); }
+.faq-list .faq-item ul li::marker { color: var(--accent-ink); }
 .faq-item .faq-tag {
   display: inline-block;
   margin-top: 12px;
@@ -163,7 +163,7 @@ nav.breadcrumb .wrap,
   color: var(--ink-2);
 }
 .faq-item .faq-inline-link {
-  color: var(--accent);
+  color: var(--accent-ink);
   font-weight: 500;
   border-bottom: 1px solid var(--line-strong);
 }
