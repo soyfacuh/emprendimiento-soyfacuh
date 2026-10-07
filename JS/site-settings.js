@@ -156,7 +156,11 @@
   function start() {
     initSettings();
     initWhatsAppForms();
-    window.setTimeout(initWelcome, 350);
+    if (document.readyState === 'complete') {
+      window.setTimeout(initWelcome, 1200);
+    } else {
+      window.addEventListener('load', function () { window.setTimeout(initWelcome, 1200); }, { once: true });
+    }
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);

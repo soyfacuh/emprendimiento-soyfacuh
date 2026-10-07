@@ -47,10 +47,13 @@
 <link href="/IMG/brand/estrella.webp" rel="apple-touch-icon" type="image/webp"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400..600&display=optional" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400..600&display=optional" rel="stylesheet"/></noscript>
+
+
+
 <!-- Structured data: Person + ProfessionalService -->
 <link href="/CSS/index.css" rel="stylesheet"/>
-<link href="/CSS/nav-dropdown.css" rel="stylesheet"/>
 <meta content="en_US" property="og:locale:alternate"/><link href="/CSS/site-settings.css" rel="stylesheet"/><script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -191,7 +194,7 @@
     }
   ]
 }
-</script><link href="/CSS/motion.css" rel="stylesheet"/></head>
+</script></head>
 <body>
 <a class="skip-link" href="#contenido">Ir al contenido principal</a>
 <nav>
@@ -410,144 +413,7 @@
 </div>
 </div>
 </section>
-<script>
-  (function () {
-    var track = document.getElementById('testi-track');
-    var dotsWrap = document.getElementById('testi-dots');
-    var prev = document.getElementById('testi-prev');
-    var next = document.getElementById('testi-next');
-    if (!track || !dotsWrap) return;
-    var items = Array.prototype.slice.call(track.children);
-    if (!items.length) return;
-
-    var index = 0;
-    var autoplay = null;
-    var visible = true;
-    var hovering = false;
-    var stepSize = 0;
-    var AUTOPLAY_MS = 5500;
-
-    function perView() {
-      var w = window.innerWidth;
-      if (w <= 700) return 1;
-      if (w <= 1024) return 2;
-      return 3;
-    }
-    function maxIndex() { return Math.max(0, items.length - perView()); }
-
-    // Se mide una sola vez por layout (carga / resize), no en cada movimiento.
-    function measure() {
-      var cs = window.getComputedStyle(track);
-      var gap = parseFloat(cs.columnGap || cs.gap || '0') || 0;
-      stepSize = items[0].getBoundingClientRect().width + gap;
-    }
-
-    function apply() {
-      track.style.transform = 'translate3d(' + (-index * stepSize) + 'px, 0, 0)';
-      syncDots();
-    }
-
-    function goTo(i) {
-      var m = maxIndex();
-      if (i < 0) i = m;
-      if (i > m) i = 0;
-      index = i;
-      apply();
-    }
-
-    function buildDots() {
-      dotsWrap.innerHTML = '';
-      var count = maxIndex() + 1;
-      var frag = document.createDocumentFragment();
-      for (var i = 0; i < count; i++) {
-        var b = document.createElement('button');
-        b.type = 'button';
-        b.className = 'carousel-dot';
-        b.setAttribute('role', 'tab');
-        b.setAttribute('aria-label', 'Ir a la reseña ' + (i + 1));
-        b.dataset.index = String(i);
-        frag.appendChild(b);
-      }
-      dotsWrap.appendChild(frag);
-      syncDots();
-    }
-
-    dotsWrap.addEventListener('click', function (e) {
-      var b = e.target.closest ? e.target.closest('.carousel-dot') : null;
-      if (!b) return;
-      goTo(parseInt(b.dataset.index, 10));
-      restartAuto();
-    });
-
-    function syncDots() {
-      var children = dotsWrap.children;
-      for (var i = 0; i < children.length; i++) {
-        children[i].classList.toggle('active', i === index);
-      }
-    }
-
-    function startAuto() {
-      stopAuto();
-      if (!visible || hovering) return;
-      autoplay = setInterval(function () { goTo(index + 1); }, AUTOPLAY_MS);
-    }
-    function stopAuto() { if (autoplay) { clearInterval(autoplay); autoplay = null; } }
-    function restartAuto() { stopAuto(); startAuto(); }
-
-    prev.addEventListener('click', function () { goTo(index - 1); restartAuto(); });
-    next.addEventListener('click', function () { goTo(index + 1); restartAuto(); });
-
-    // Touch / swipe
-    var sx = 0, dx = 0, dragging = false;
-    track.addEventListener('touchstart', function (e) {
-      dragging = true; sx = e.touches[0].clientX; dx = 0; stopAuto();
-    }, { passive: true });
-    track.addEventListener('touchmove', function (e) {
-      if (!dragging) return;
-      dx = e.touches[0].clientX - sx;
-    }, { passive: true });
-    track.addEventListener('touchend', function () {
-      if (!dragging) return;
-      dragging = false;
-      if (Math.abs(dx) > 40) goTo(index + (dx < 0 ? 1 : -1));
-      startAuto();
-    }, { passive: true });
-
-    var resizeTimer;
-    window.addEventListener('resize', function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function () {
-        measure();
-        if (index > maxIndex()) index = maxIndex();
-        buildDots();
-        apply();
-      }, 150);
-    }, { passive: true });
-
-    var carousel = document.querySelector('.testimonials-carousel');
-    if (carousel) {
-      carousel.addEventListener('mouseenter', function () { hovering = true; stopAuto(); });
-      carousel.addEventListener('mouseleave', function () { hovering = false; startAuto(); });
-
-      // Autoplay sólo mientras la sección está en pantalla.
-      if ('IntersectionObserver' in window) {
-        new IntersectionObserver(function (entries) {
-          visible = entries[0].isIntersecting;
-          if (visible) startAuto(); else stopAuto();
-        }, { threshold: 0.15 }).observe(carousel);
-      }
-    }
-
-    document.addEventListener('visibilitychange', function () {
-      if (document.hidden) stopAuto(); else startAuto();
-    });
-
-    measure();
-    buildDots();
-    apply();
-    startAuto();
-  })();
-</script>
+<script defer src="/JS/home-testimonials.js"></script>
 <section aria-labelledby="contact-title" class="project-contact" id="contacto">
 <div class="wrap project-contact__grid">
 <div class="project-contact__copy">

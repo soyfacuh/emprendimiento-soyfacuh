@@ -21,7 +21,7 @@
 }
 .faq-hero .wrap { position: relative; }
 .faq-hero h1 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
   font-weight: 500;
   font-size: clamp(2.4rem, 6vw, 4.6rem);
   line-height: 1.02;
@@ -60,7 +60,7 @@ nav.breadcrumb .wrap,
 }
 
 .breadcrumb {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -101,7 +101,7 @@ nav.breadcrumb .wrap,
   transform: translateY(-2px);
 }
 .faq-chip .faq-chip-num {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.68rem;
   color: var(--accent-ink);
 }
@@ -111,7 +111,7 @@ nav.breadcrumb .wrap,
 .faq-section:first-of-type { border-top: none; }
 .faq-section > .wrap > .faq-grid { align-items: start; }
 .faq-section h2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
   font-weight: 500;
   font-size: clamp(1.8rem, 3.6vw, 2.7rem);
   line-height: 1.06;
@@ -156,7 +156,7 @@ nav.breadcrumb .wrap,
   border-radius: 999px;
   background: var(--accent-soft);
   border: 1px solid var(--line-strong);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.66rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
