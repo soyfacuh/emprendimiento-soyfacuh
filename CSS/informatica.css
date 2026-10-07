@@ -698,17 +698,3 @@
 .portfolio-lab .work-card.featured{grid-column:span 2}
 @media(max-width:820px){.lab-note{grid-template-columns:1fr;margin-bottom:42px}.portfolio-lab .work-card.featured{grid-column:auto}.lab-group-head{margin-top:44px}.lab-count{font-size:1.9rem}}
 @media(max-width:520px){.lab-note{padding:17px}.lab-group-head{align-items:flex-start}.lab-group-head .mono{font-size:.62rem}.lab-group-head h3{font-size:1.7rem}}
-
-/* === Critical desktop navigation dropdown ===
-   Kept in each page stylesheet so the primary nav never depends on a
-   secondary/shared stylesheet or a stale cache entry. */
-.nav-dropdown{position:relative;display:inline-flex;align-items:center}
-.nav-dropdown-toggle{display:inline-flex;align-items:center;gap:4px}
-.nav-caret{font-size:.7em;transition:transform .2s}
-.nav-submenu{position:absolute;top:100%;left:50%;min-width:170px;padding:8px;margin-top:10px;display:flex;flex-direction:column;gap:2px;background:var(--bg);border:1px solid var(--line);border-radius:12px;box-shadow:0 18px 40px -24px rgba(31,26,20,.45);opacity:0;visibility:hidden;pointer-events:none;transform:translate(-50%,6px);transition:opacity .2s,transform .2s,visibility .2s;z-index:80}
-.nav-submenu::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
-.nav-dropdown:hover .nav-caret,.nav-dropdown:focus-within .nav-caret{transform:rotate(180deg)}
-.nav-dropdown:hover .nav-submenu,.nav-dropdown:focus-within .nav-submenu{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0)}
-.nav-links .nav-submenu a{display:flex;align-items:center;min-height:40px;padding:8px 12px;border-radius:8px;white-space:nowrap}
-.nav-links .nav-submenu a:hover,.nav-links .nav-submenu a.active{background:var(--bg-2);color:var(--accent-ink,var(--accent))}
-
