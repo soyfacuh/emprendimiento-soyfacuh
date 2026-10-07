@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://soyfacuh.com/</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://soyfacuh.com/planes.html</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://soyfacuh.com/faq.html</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://soyfacuh.com/</loc><lastmod>2026-10-07</lastmod><changefreq>weekly</changefreq><priority>1.0</priority><xhtml:link rel="alternate" hreflang="es-AR" href="https://soyfacuh.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://soyfacuh.com/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://soyfacuh.com/"/></url>
+  <url><loc>https://soyfacuh.com/en/</loc><lastmod>2026-10-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link rel="alternate" hreflang="es-AR" href="https://soyfacuh.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://soyfacuh.com/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://soyfacuh.com/"/></url>
+  <url><loc>https://soyfacuh.com/informatica/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority><xhtml:link rel="alternate" hreflang="es-AR" href="https://soyfacuh.com/informatica/"/><xhtml:link rel="alternate" hreflang="en" href="https://soyfacuh.com/en/informatica/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://soyfacuh.com/informatica/"/></url>
+  <url><loc>https://soyfacuh.com/en/informatica/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><xhtml:link rel="alternate" hreflang="es-AR" href="https://soyfacuh.com/informatica/"/><xhtml:link rel="alternate" hreflang="en" href="https://soyfacuh.com/en/informatica/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://soyfacuh.com/informatica/"/></url>
+  <url><loc>https://soyfacuh.com/marketing/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority><xhtml:link rel="alternate" hreflang="es-AR" href="https://soyfacuh.com/marketing/"/><xhtml:link rel="alternate" hreflang="en" href="https://soyfacuh.com/en/marketing/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://soyfacuh.com/marketing/"/></url>
+  <url><loc>https://soyfacuh.com/en/marketing/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><xhtml:link rel="alternate" hreflang="es-AR" href="https://soyfacuh.com/marketing/"/><xhtml:link rel="alternate" hreflang="en" href="https://soyfacuh.com/en/marketing/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://soyfacuh.com/marketing/"/></url>
+  <url><loc>https://soyfacuh.com/planes/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><xhtml:link rel="alternate" hreflang="es-AR" href="https://soyfacuh.com/planes/"/><xhtml:link rel="alternate" hreflang="en" href="https://soyfacuh.com/en/planes/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://soyfacuh.com/planes/"/></url>
+  <url><loc>https://soyfacuh.com/en/planes/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority><xhtml:link rel="alternate" hreflang="es-AR" href="https://soyfacuh.com/planes/"/><xhtml:link rel="alternate" hreflang="en" href="https://soyfacuh.com/en/planes/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://soyfacuh.com/planes/"/></url>
+  <url><loc>https://soyfacuh.com/faq/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority><xhtml:link rel="alternate" hreflang="es-AR" href="https://soyfacuh.com/faq/"/><xhtml:link rel="alternate" hreflang="en" href="https://soyfacuh.com/en/faq/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://soyfacuh.com/faq/"/></url>
+  <url><loc>https://soyfacuh.com/en/faq/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority><xhtml:link rel="alternate" hreflang="es-AR" href="https://soyfacuh.com/faq/"/><xhtml:link rel="alternate" hreflang="en" href="https://soyfacuh.com/en/faq/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://soyfacuh.com/faq/"/></url>
+  <url><loc>https://soyfacuh.com/recursos/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><xhtml:link rel="alternate" hreflang="es-AR" href="https://soyfacuh.com/recursos/"/><xhtml:link rel="alternate" hreflang="en" href="https://soyfacuh.com/en/recursos/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://soyfacuh.com/recursos/"/></url>
+  <url><loc>https://soyfacuh.com/en/recursos/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority><xhtml:link rel="alternate" hreflang="es-AR" href="https://soyfacuh.com/recursos/"/><xhtml:link rel="alternate" hreflang="en" href="https://soyfacuh.com/en/recursos/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://soyfacuh.com/recursos/"/></url>
+  <url><loc>https://soyfacuh.com/sobre-mi/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><xhtml:link rel="alternate" hreflang="es-AR" href="https://soyfacuh.com/sobre-mi/"/><xhtml:link rel="alternate" hreflang="en" href="https://soyfacuh.com/en/about/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://soyfacuh.com/sobre-mi/"/></url>
+  <url><loc>https://soyfacuh.com/en/about/</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority><xhtml:link rel="alternate" hreflang="es-AR" href="https://soyfacuh.com/sobre-mi/"/><xhtml:link rel="alternate" hreflang="en" href="https://soyfacuh.com/en/about/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://soyfacuh.com/sobre-mi/"/></url>
 </urlset>

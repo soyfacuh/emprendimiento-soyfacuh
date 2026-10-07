@@ -1,0 +1,10 @@
+/* v7 motion system — lightweight CSS/JS depth, no WebGL. */
+.motion-reveal{opacity:0;transform:translateY(28px) scale(.985);transition:opacity .72s cubic-bezier(.2,.75,.2,1),transform .72s cubic-bezier(.2,.75,.2,1);transition-delay:var(--reveal-delay,0ms)}
+.motion-reveal.is-visible{opacity:1;transform:none}
+.motion-card{transform-style:preserve-3d;will-change:transform;transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+@media (hover:hover) and (pointer:fine){.motion-card:hover{box-shadow:0 26px 60px -42px rgba(31,26,20,.5);border-color:var(--accent)!important}}
+.motion-tilt{transform-style:preserve-3d;will-change:transform;transition:transform .18s ease-out}
+.page-ambient{position:fixed;inset:auto auto 8vh -10vw;width:32vw;height:32vw;border-radius:50%;background:radial-gradient(circle,var(--accent) 0%,transparent 68%);opacity:.045;filter:blur(22px);pointer-events:none;z-index:-1;animation:ambientDrift 14s ease-in-out infinite alternate}
+@keyframes ambientDrift{to{transform:translate(18vw,-12vh) scale(1.15)}}
+@media(max-width:700px){.motion-reveal{transform:translateY(18px)}.page-ambient{display:none}.motion-tilt{transform:none!important}}
+@media(prefers-reduced-motion:reduce){.motion-reveal{opacity:1!important;transform:none!important;transition:none!important}.motion-card,.motion-tilt{transform:none!important;transition:none!important}.page-ambient{display:none!important}}
