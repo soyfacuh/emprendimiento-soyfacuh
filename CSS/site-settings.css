@@ -84,7 +84,7 @@ html[data-theme="dark"] .soon-visual { background: linear-gradient(var(--line) 1
 .settings-option {
   min-height: 42px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 10px;
   background: var(--bg-2); color: var(--ink-2); display: flex; align-items: center; justify-content: center;
-  gap: 7px; text-align: center; font: 600 .82rem 'Inter', sans-serif; cursor: pointer; transition: .2s;
+  gap: 7px; text-align: center; font: 600 .82rem 'Inter', sans-serif; cursor: pointer;
 }
 .settings-option:hover,.settings-option:focus-visible { border-color: var(--accent); color: var(--ink); outline: none; }
 .settings-option.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-ink); }
@@ -241,17 +241,6 @@ html[data-theme="dark"] .about-collab{background:#100d0b!important}
 
 
 /* === Mobile/performance polish === */
-@supports (content-visibility: auto) {
-  main > section,
-  .hero-stats,
-  footer {
-    content-visibility: auto;
-  }
-  main > section { contain-intrinsic-size: 800px; }
-  .hero-stats { contain-intrinsic-size: 620px; }
-  footer { contain-intrinsic-size: 520px; }
-}
-
 /* Expensive blur/continuous motion is unnecessary on small screens. */
 @media (max-width: 820px) {
   nav {
