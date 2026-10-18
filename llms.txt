@@ -5,7 +5,7 @@
 ## Información principal
 
 - [Inicio](https://soyfacuh.com/): presentación, servicios y formas de contacto.
-- [Planes y servicios](https://soyfacuh.com/planes/): opciones de desarrollo web, marketing digital y clases; presupuestos personalizados.
+- [Planes y servicios](https://soyfacuh.com/planes/): desarrollo web, marketing digital y clases particulares en español de informática, e-commerce, liderazgo, gestión de equipos y administración; presupuestos personalizados.
 - [Marketing digital](https://soyfacuh.com/marketing/): asesorías, estrategia digital, SEO y publicidad online.
 - [Portfolio Lab](https://soyfacuh.com/informatica/): proyectos y herramientas desarrollados para explorar soluciones web. Algunos son demostraciones y no necesariamente sitios activos de clientes.
 - [Sobre mí](https://soyfacuh.com/sobre-mi/): perfil, formación y trayectoria de Facundo Centurión.
