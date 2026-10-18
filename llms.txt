@@ -1,0 +1,33 @@
+# soyfacuh
+
+> Sitio oficial de Facundo Centurión (soyfacuh), desarrollador web Full Stack y profesional de marketing digital en Buenos Aires, Argentina. Servicios de desarrollo web, catálogos digitales, marketing y capacitaciones para emprendimientos, profesionales y negocios. El sitio está disponible en español e inglés.
+
+## Información principal
+
+- [Inicio](https://soyfacuh.com/): presentación, servicios y formas de contacto.
+- [Planes y servicios](https://soyfacuh.com/planes/): opciones de desarrollo web, marketing digital y clases; presupuestos personalizados.
+- [Marketing digital](https://soyfacuh.com/marketing/): asesorías, estrategia digital, SEO y publicidad online.
+- [Portfolio Lab](https://soyfacuh.com/informatica/): proyectos y herramientas desarrollados para explorar soluciones web. Algunos son demostraciones y no necesariamente sitios activos de clientes.
+- [Sobre mí](https://soyfacuh.com/sobre-mi/): perfil, formación y trayectoria de Facundo Centurión.
+- [Preguntas frecuentes](https://soyfacuh.com/faq/): proceso de trabajo, plazos, pagos, soporte y consultas habituales.
+- [Recursos](https://soyfacuh.com/recursos/): herramientas y materiales digitales.
+
+## Contacto
+
+- [Sitio oficial](https://soyfacuh.com/)
+- Correo: contacto@soyfacuh.com
+- [Instagram](https://www.instagram.com/soyfacuh/)
+
+## English
+
+- [Home](https://soyfacuh.com/en/)
+- [Plans and services](https://soyfacuh.com/en/planes/)
+- [Digital marketing](https://soyfacuh.com/en/marketing/)
+- [Portfolio Lab](https://soyfacuh.com/en/informatica/)
+- [About](https://soyfacuh.com/en/about/)
+- [FAQ](https://soyfacuh.com/en/faq/)
+
+## Información ampliada
+
+- [Resumen detallado para agentes](https://soyfacuh.com/llms-full.txt): servicios, funcionamiento y enlaces oficiales.
+
